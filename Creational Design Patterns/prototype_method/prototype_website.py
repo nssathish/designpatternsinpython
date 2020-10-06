@@ -1,5 +1,19 @@
 import copy
-
+"""
+    Prototype Pattern
+    -----------------
+    The design pattern helps to create a object clones.
+    It accepts an object as a parameter and returns a clone of it
+    It allows changes to some part of the object while cloning it
+    
+    Use cases
+    ---------
+    The need for duplicating an object that is populated from a 
+    database and has references to the other database-based objects.
+    **It is costly to clone such a complex object, so a prototype
+    is a convenient way to solve the problem
+    
+"""
 
 class Website:
     def __init__(self, name, domain, description, author, **kwargs):
