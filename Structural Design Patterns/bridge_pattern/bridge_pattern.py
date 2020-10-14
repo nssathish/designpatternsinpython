@@ -2,7 +2,7 @@
 Bridge Pattern
 --------------
 A structural pattern unlike the adapter pattern, is to
-1. Design up-front to deouple an implementation from its abstraction
+1. Design up-front to decouple an implementation from its abstraction
 
 Use cases
 ---------
@@ -11,10 +11,15 @@ Use cases
     2. By defining a separate interface for the different objects involved
 """
 from urllib import request
-from abc import ABCMeta, abstractmethod
+from abc import ABC, ABCMeta, abstractmethod
 
 
-class ResourceContent:
+class ResourceContent(ABC):
+    """
+    Define the abstraction's interface.
+    Maintain a reference to an object which represents the implementor.
+    """
+
     def __init__(self, implementation) -> None:
         self._implementation = implementation
 
