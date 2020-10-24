@@ -43,9 +43,9 @@ class Car:
             cls.car_type = car_type
         return car_type_obj
 
-    def render(self, color, x, y) -> str:
+    def render(self, color, x, y) -> None:
         model = self.car_type
-        return f'render {model} car in {color} at location ({x}, {y})'
+        print(f'render {model} car in {color} at location ({x}, {y})')
 
 
 def main():
@@ -56,17 +56,20 @@ def main():
 
     for _ in range(10):
         c1 = Car(CarTypes.subcompact)
-        c1.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate, max_coordinate))
+        c1.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate,
+                                                                                                  max_coordinate))
         car_counter += 1
 
     for _ in range(5):
         c2 = Car(CarTypes.compact)
-        c2.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate, max_coordinate))
+        c2.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate,
+                                                                                                  max_coordinate))
         car_counter += 1
 
     for _ in range(3):
         c3 = Car(CarTypes.suv)
-        c3.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate, max_coordinate))
+        c3.render(random.choice(colors), rnd.randint(min_coordinate, max_coordinate), rnd.randint(min_coordinate,
+                                                                                                  max_coordinate))
         car_counter += 1
 
     c4 = Car(CarTypes.subcompact)

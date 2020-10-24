@@ -7,9 +7,9 @@
     Real-world eg.,
     ---------------
     1. Car manufacturing. Same machinery is used for stamping the parts, doors, panels,
-    hoods, fenders, mirrors etc., of different car models
+    hoods, fenders, mirrors etc., of different car mvcmodels
     2. 'factory_boy' in Django provides an abstract factory implementation for creating
-    models in tests. 
+    mvcmodels in tests.
 
     Use cases
     ---------
